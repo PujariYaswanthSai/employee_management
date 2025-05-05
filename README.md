@@ -2,6 +2,13 @@
 
 A full-stack web application for managing employee data, built with React and Django.
 
+## Demo Access
+
+### Admin Interface Access
+- URL: http://localhost:8080/admin
+- Username: `admin`
+- Password: `admin123`
+
 ## Features
 
 - Add, edit, and delete employee records
@@ -21,6 +28,24 @@ A full-stack web application for managing employee data, built with React and Dj
 - Django
 - Django REST Framework
 - SQLite database (configurable for MySQL)
+
+## Project Structure
+```
+employee_management/
+├── frontend/               # React frontend
+│   ├── src/
+│   │   ├── components/    # React components
+│   │   └── App.js        # Main application
+│   └── package.json       # Frontend dependencies
+│
+└── backend/               # Django backend
+    ├── task_api/         # Main API app
+    │   ├── models.py     # Employee data model
+    │   ├── views.py      # API views
+    │   ├── urls.py       # API endpoints
+    │   └── admin.py      # Admin interface
+    └── manage.py         # Django management
+```
 
 ## Setup Instructions
 
@@ -44,9 +69,12 @@ A full-stack web application for managing employee data, built with React and Dj
    ```
    python manage.py migrate
    ```
-6. Create admin user:
+6. Create admin user (or use default):
    ```
    python manage.py createsuperuser
+   # Or use default:
+   # Username: admin
+   # Password: admin123
    ```
 7. Start the server:
    ```
@@ -71,6 +99,8 @@ A full-stack web application for managing employee data, built with React and Dj
 - Frontend: http://localhost:3000
 - Backend API: http://localhost:8080/api/employees/
 - Admin Interface: http://localhost:8080/admin
+  - Username: `admin`
+  - Password: `admin123`
 
 ## API Endpoints
 - GET /api/employees/ - List all employees
@@ -82,3 +112,18 @@ A full-stack web application for managing employee data, built with React and Dj
 ## Filtering
 - By Department: /api/employees/?department=IT
 - By Status: /api/employees/?is_active=true
+
+## Employee Data Structure
+```json
+{
+  "id": 1,
+  "first_name": "John",
+  "last_name": "Doe",
+  "email": "john.doe@company.com",
+  "department": "IT",
+  "position": "Software Engineer",
+  "hire_date": "2025-05-05",
+  "salary": 75000,
+  "phone": "555-0123",
+  "is_active": true
+}
