@@ -1,6 +1,6 @@
 # Employee Management System
 
-A full-stack web application for managing employee data, built with React and Django.
+A full-stack web application for managing employee data, built with React and Django. I have used sqlite instead of mysql because my pc was giving some issues with it.
 
 ## Demo Access
 
